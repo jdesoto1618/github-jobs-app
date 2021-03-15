@@ -8,7 +8,7 @@ const ACTIONS = {
   ERROR: 'error'
 }
 
-const BASE_URL = 'https://jobs.github.com/positions.json'
+const BASE_URL = 'https://secret-ocean-49799.herokuapp.com/https://jobs.github.com/positions.json'
 
 function reducer(state, action) {
   switch (action.type) {
