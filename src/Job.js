@@ -29,7 +29,11 @@ export default function Job({ job }) {
         </div>
 
         <Card.Text>
-          <Button variant='primary'>View Job Details</Button>
+          <Button 
+            onClick={() => setOpen(prevOpen => !prevOpen )} 
+            variant='primary'>
+              View Job Details
+          </Button>
         </Card.Text>
 
         <Collapse in={open}>
