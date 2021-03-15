@@ -1,5 +1,6 @@
 // hook for getting all the different yobs from Github
-import { useReducer } from 'react';
+import { useReducer, useEffect } from 'react';
+import axios from 'axios';
 
 const ACTIONS = {
   MAKE_REQUEST: 'make-request',
@@ -21,9 +22,14 @@ function reducer(state, action) {
 }
 
 export default function useFetchJobs(params, page) {
+  
   const [state, dispatch] = useReducer(reducer, { jobs: [], loading: true });
 
-  dispatch({ type: 'hello', payload: { x: 3}})
+  useEffect(() => {
+    displatch({ type: MAKE_REQUEST }),
+    axois.get()
+  }, [params, page])
+
   return {
     jobs: [],
     loading: false,
