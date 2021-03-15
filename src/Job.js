@@ -20,7 +20,7 @@ export default function Job({ job }) {
             <Badge variant='secondary'>
               {job.location}
             </Badge>
-            <div>
+            <div style={{ wordBreak: 'break-all' }}>
               <ReactMarkdown source={job.how_to_apply} />
             </div>
           </div>
