@@ -4,11 +4,11 @@ import { Pagination } from 'react-bootstrap';
 export default function JobsPagination({ page, setPage }) {
   return (
     <Pagination>
-      <Pagination.Prev />
-      <Pagination.Item>{page - 1}</Pagination.Item>
+      {page !== 1 && <Pagination.Prev />}
+      {page !== 1 && <Pagination.Item>{page - 1}</Pagination.Item>}
       <Pagination.Item>{page}</Pagination.Item>
       <Pagination.Item>{page + 1}</Pagination.Item>
-      <Pagination.Next />
+      {page !== page.length - 1 && <Pagination.Next />}
     </Pagination>
   )
 }
