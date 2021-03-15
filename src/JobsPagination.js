@@ -4,7 +4,7 @@ import { Pagination } from 'react-bootstrap';
 export default function JobsPagination({ page, setPage }) {
   return (
     <Pagination>
-
+      <Pagination.Prev />
     </Pagination>
   )
 }
